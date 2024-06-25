@@ -7,16 +7,16 @@ console.log("JS Variables");
  */
 
 
-var firstName = "sai";
+var firstName = "sai";//string
 var lastName = "Kumar";
-var isQualified = false;
-var age = 38;
+var isQualified = false;//boolean 
+var age = 38;//number
 var bankBalance = 10000.0;
-var aadhar = {
+var aadhar = {          //object
     id: 1,
     aadharNo: 20002000002
 }
-var names = ["sai", "raj", "karan"];
+var names = ["sai", "raj", "karan"]; //array (object)
 
 
 console.log("FirstName:" + firstName);
