@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Event Handling</title>
+
+</head>
+
+<body>
+    <h1>JS Event Handling</h1>
+
+    <div class="calculator">
+        <div>
+            <input type="number" name="num1" id="num1" placeholder="Enter Number1">
+        </div>
+        <div>
+            <input type="number" name="num2" id="num2" placeholder="Enter Number2">
+        </div>
+        <div>
+            <select onchange="onOperationHandleChange(event)">
+                <option value="">--SELECT--</option>
+                <option value="add">ADD</option>
+                <option value="mul">MUL</option>
+                <option value="sub">SUB</option>
+                <option value="div">DIV</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit" onclick="calculate()">Calulate</button>
+        </div>
+
+        <div>
+            <h1>Output:</h1>
+            <h1 id="output"></h1>
+        </div>
+
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
