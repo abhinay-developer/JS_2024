@@ -125,3 +125,19 @@ y(x, "Hello");
 //Y
 //X
 //HELLO
+
+//()=>
+
+// map(()=>)
+// filter(()=>)
+// reduce(()=>)
+
+const doubleNumbers = [1, 2, 3, 4].map((num) => num * 2);
+const evenNumbers = [1, 2, 3, 4].filter((num) => num % 2 == 0);
+const sum = [1, 2, 3, 4].reduce((prev, curr) => prev + curr);
+const usersSum = [{ id: 1, salary: 1000 }, { id: 2, salary: 2000 }].reduce((prev, curr) => prev + curr.salary, 0);
+
+console.log(doubleNumbers);
+console.log(evenNumbers);
+// console.log(sum);
+console.log(usersSum);

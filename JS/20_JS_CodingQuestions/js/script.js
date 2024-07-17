@@ -70,7 +70,7 @@ function findLargest() {
 }
 
 const value = findLargest();
-console.log(value);
+// console.log(value);
 
 
 const elements = [9, 1, 3, 4, 57, 98];  //98
@@ -86,7 +86,7 @@ function findSum() {
 }
 
 const sum = findSum();
-console.log(sum)
+// console.log(sum)
 
 
 function removeDuplicates() {
@@ -100,4 +100,15 @@ function removeDuplicates() {
     mySet.forEach((element) => console.log(element))
 }
 
-removeDuplicates();
+//removeDuplicates();
+
+
+let x = 10;
+let y = 20;
+
+
+x = x + y;//30
+y = x - y;//10    30-20    y=10
+x = x - y; //20   30-10    x=20
+
+console.log("After Swaping : x:" + x + " " + "y:" + y);

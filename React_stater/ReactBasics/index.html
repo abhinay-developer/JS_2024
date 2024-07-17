@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Basics</title>
+    <style>
+        body {
+            background-color: #f2f3f4;
+            box-sizing: border-box;
+        }
+
+        #card {
+            background-color: #fff;
+            width: 50%;
+            height: 50%;
+            margin: auto;
+            padding: 2rem;
+        }
+
+        .item {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to React</h1>
+    <div id="card">
+        <!-- <div class="item">Item1</div>
+        <div class="item">Item2</div>
+        <div class="item">Item3</div> -->
+    </div>
+
+
+    <script>
+        const card = document.getElementById('card');
+        const div1 = document.createElement("div");
+        //<div></div>
+        div1.textContent = "Item1";
+        //<div>Item1</div>
+        div1.className = "item";
+        //<div class="item">Item1</div>
+        const div2 = document.createElement("div");
+        //<div></div>
+        div2.textContent = "Item";
+        //<div>Item2</div>
+        div2.className = "item";
+        //<div class="item">Item2</div>
+        const div3 = document.createElement("div");
+        //<div></div>
+        div3.textContent = "Item3";
+        //<div>Item3</div>
+        div3.className = "item";
+        //<div class="item">Item1</div>
+        card.append(div1);
+        card.append(div2);
+        card.append(div3);
+        // <div id="card">
+        //     <div class="item">Item1</div>
+        //     <div class="item">Item2</div>
+        //     <div class="item">Item3</div>
+        // </div>
+    </script>
+</body>
+
+</html>
