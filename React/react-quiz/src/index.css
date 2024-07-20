@@ -1,0 +1,58 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #f2f3f4;
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  background-color: #000;
+  padding: 0.5rem;
+}
+
+.header h1 {
+  color: #fff;
+}
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 0.2rem;
+  text-align: center;
+}
+
+.add-quiz {
+  padding: 4rem;
+  width: 50%;
+  background-color: #fff;
+  box-shadow: 1px 2px solid black;
+}
+
+.view-quiz {
+  padding: 4rem;
+  width: 50%;
+  background-color: #fff;
+  box-shadow: 1px 2px solid black;
+}
+input[type="text"] {
+  padding: 1rem;
+  outline: none;
+  border: 1px solid grey;
+  width: 100%;
+  margin-top: 0.4rem;
+  border-radius: 0.2rem;
+}
+
+.btn-quiz {
+  width: 50%;
+  outline: none;
+  border: none;
+  background-color: #000;
+  color: #fff;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 0.4rem;
+  border-radius: 0.2rem;
+}
