@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ViewQuiz from "./ViewQuiz";
 import QuizStarted from "./QuizStarted";
+import Even from "./Even";
 
 const javascriptQuestions = [
     {
@@ -97,6 +98,7 @@ function AddQuiz() {
     const [answer, setAnswer] = useState('');
     const [questionList, setQuestionList] = useState(javascriptQuestions);
     const [isStartQuiz, setIsStartQuiz] = useState(false);
+    const [elements, setElements] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
 
     const handleAddQuiz = (e) => {
         e.preventDefault();
@@ -118,6 +120,15 @@ function AddQuiz() {
 
     return (
         <main>
+            <Even elements={elements} />
+
+
+
+
+
+
+
+
             <form onSubmit={(e) => handleAddQuiz(e)}>
                 <div className='add-quiz'>
                     <h1>Add Quiz</h1>

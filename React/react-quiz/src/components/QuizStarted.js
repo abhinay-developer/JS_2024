@@ -23,6 +23,7 @@ export default function QuizStarted({ questionList }) {
             {           //10 >=  (0+1)=1 ==>  10 >=1=true
                 //10>=11 ==false
                 questionList.length >= (counter + 1) ? <div>
+
                     <ul>
                         <h2>{counter + 1} . {questionList[counter].question}</h2>
                         <li><input type="radio" name='option'
