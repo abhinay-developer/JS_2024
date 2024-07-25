@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "firstName": "raj",
+      "lastName": "kumar",
+      "email": "rajkumar@gmail.com",
+      "password": "raj@123",
+      "mobileNumber": 8855885588,
+      "id": "91f4"
+    },
+    {
+      "id": "392d",
+      "firstName": "saikumar",
+      "lastName": "g",
+      "email": "saikumar@gmail.com",
+      "password": "sai@9900",
+      "mobileNumber": "7788778877"
+    },
+    {
+      "id": "c73d",
+      "firstName": "narender",
+      "lastName": "reddy",
+      "email": "narender@gmail.com",
+      "password": "Narender@123",
+      "mobileNumber": "8787878787"
+    }
+  ]
+}

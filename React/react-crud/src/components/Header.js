@@ -19,6 +19,11 @@ export default function Header() {
                             <Link to="create-account" class="nav-link">Create Account</Link>
 
                         </li>
+                        <li class="nav-item">
+                            {/* <a class="nav-link" href="create-account">Create Account</a> */}
+                            <Link to="view-users" class="nav-link">View Users</Link>
+
+                        </li>
                     </ul>
                 </div>
             </nav>

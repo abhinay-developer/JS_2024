@@ -3,4 +3,13 @@ body {
   padding: 0;
   font-family: "Poppins", sans-serif;
   box-sizing: border-box;
+  background-color: #e2dfd0;
+}
+
+label {
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+::placeholder {
+  font-size: 12px;
 }

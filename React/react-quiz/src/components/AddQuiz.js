@@ -109,6 +109,7 @@ function AddQuiz() {
         setOption1('');
         setOption2('');
         setOption3('');
+
         setOption4('');
         setAnswer('');
     }
