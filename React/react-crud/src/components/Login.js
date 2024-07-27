@@ -1,17 +1,48 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { USER_BASE_URL } from '../routes/AppRoutes';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [users, setUsers] = useState([]);
+    const [status, setStatus] = useState('');
+    const navigate = useNavigate();
 
     const handleLogin = (e) => {
-        e.preventDefualt();
+        e.preventDefault();
         const form = { email, password };
         console.log(form);
+        const user = users.find((user) => user.email === form.email && user.password === form.password);
+        if (user) {
+            navigate('../home')
+        } else {
+            setStatus('LOGIN FAILED')
+        }
     }
+
+    useEffect(() => {
+        getAllUsers();
+    }, []) //dependency Array
+
+    const getAllUsers = async () => {
+        try {
+            const data = await fetch(USER_BASE_URL)
+            const res = await data.json();
+            setUsers(res);
+            console.log(res);
+        } catch (err) {
+            throw new Error(err);
+        }
+    }
+
+
     return (
         <>
             <div class="container mt-5 bg-white p-5">
+                {
+                    status && <p class='alert alert-danger'>{status}</p>
+                }
                 <h2 class="mb-4">Login</h2>
                 <form onSubmit={(e) => handleLogin(e)}>
                     <div class="form-group">

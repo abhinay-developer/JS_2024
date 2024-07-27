@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { USER_BASE_URL } from '../routes/AppRoutes';
+import { useNavigate, useParams } from 'react-router-dom';
 
 
 export default function CreateAccount() {
@@ -9,11 +10,19 @@ export default function CreateAccount() {
     const [password, setPassword] = useState('');
     const [mobileNumber, setMobileNumber] = useState(null);
     const [status, setStatus] = useState('');
+    const params = useParams();//URL parameter
+    const navigate = useNavigate();
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
         const form = { firstName, lastName, email, password, mobileNumber };
-        createAccount(form);
+
+        if ((params.id === '' || params.id === undefined || params.id === null)) {
+            createAccount(form);
+        } else {
+            updateAccount(form);
+        }
     }
 
     const clearForm = () => {
@@ -22,6 +31,35 @@ export default function CreateAccount() {
         setEmail('');
         setPassword('');
         setMobileNumber('');
+    }
+
+
+    useEffect(() => {
+        if (params.id) {
+            getUserById();
+        }
+
+    }, [])
+
+
+    const setFormData = (res) => {
+        const { firstName, lastName, email, password, mobileNumber } = res;
+        setFirstName(firstName);
+        setLastName(lastName);
+        setEmail(email);
+        setPassword(password);
+        setMobileNumber(mobileNumber);
+    }
+
+
+    const getUserById = async () => {
+        try {
+            const data = await fetch(`${USER_BASE_URL}/${params.id}`)//GET DATA BASED ON ID
+            const res = await data.json();
+            setFormData(res);
+        } catch (err) {
+            throw new Error(err);
+        }
     }
 
     const createAccount = async (form) => {
@@ -43,10 +81,33 @@ export default function CreateAccount() {
         }
     }
 
+    const updateAccount = async (form) => {
+        try {
+            const data = await fetch(`${USER_BASE_URL}/${params.id}`,
+                {
+                    method: 'PUT',
+                    body: JSON.stringify(form)
+                }
+            )
+            const res = await data.json();
+            navigate('../view-users')
+
+            console.log(res);
+
+        } catch (err) {
+            setStatus("ACCOUNT UPDATED FAILED");
+            throw new Error(err);
+        }
+    }
+
     return (
         <>
             <div class="container mt-5 bg-white p-5">
-                <h2 class="mb-4">Create Account</h2>
+                <h2 class="mb-4">
+                    {
+                        (params.id === '' || params.id === undefined || params.id === null) ? 'CREATE ACCOUNT' : 'UPDATE ACCOUNT'
+                    }
+                </h2>
                 <form onSubmit={(e) => handleSubmit(e)}>
                     {
                         status && <p className='alert alert-success'>{status}</p>
@@ -82,7 +143,11 @@ export default function CreateAccount() {
                             value={mobileNumber} onChange={(e) => setMobileNumber(e.target.value)}
                         />
                     </div>
-                    <button type="submit" class="btn btn-primary mt-2">Register</button>
+                    <button type="submit" class="btn btn-primary mt-2">
+                        {
+                            (params.id === '' || params.id === undefined || params.id === null) ? 'CREATE ACCOUNT' : 'UPDATE ACCOUNT'
+                        }
+                    </button>
                 </form>
             </div>
 
