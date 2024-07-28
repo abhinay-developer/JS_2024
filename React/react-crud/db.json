@@ -3,7 +3,7 @@
     {
       "firstName": "raj",
       "lastName": "sena",
-      "email": "rajsena@gmail.com",
+      "email": "raj@gmail.com",
       "password": "raj@123",
       "mobileNumber": 8855885588,
       "id": "91f4"
@@ -15,6 +15,62 @@
       "password": "Virat@1234",
       "mobileNumber": "8899889988",
       "id": "1d2a"
+    },
+    {
+      "id": "c7f3",
+      "firstName": "nani",
+      "lastName": "kumar",
+      "email": "nanikumar@gmail.com",
+      "password": "nani@1234",
+      "mobileNumber": "7788778877"
+    },
+    {
+      "id": "d7a1",
+      "firstName": "naresh",
+      "lastName": "kumar",
+      "email": "rajkumar@gmail.com",
+      "password": "",
+      "mobileNumber": "979877"
+    },
+    {
+      "id": "d2b4",
+      "firstName": "sai",
+      "lastName": "kumar",
+      "email": "sai@gmail.com",
+      "password": "sai@1234",
+      "mobileNumber": "77887888778"
+    },
+    {
+      "id": "39db",
+      "firstName": "sai",
+      "lastName": "saa",
+      "email": "ss@gmail.cm",
+      "password": "ssksnkslnsl",
+      "mobileNumber": "8899989987787887"
+    },
+    {
+      "id": "4b1c",
+      "firstName": "raj",
+      "lastName": "kumar",
+      "email": "rajkumar@gmail.com",
+      "password": "raj@123344",
+      "mobileNumber": "87797979"
+    },
+    {
+      "firstName": "nani",
+      "lastName": "nani@gmail.com",
+      "email": "nani@gmail.com",
+      "password": "snsososps",
+      "mobileNumber": "77877887",
+      "id": "25cb"
+    },
+    {
+      "id": "65fa",
+      "firstName": "raj",
+      "lastName": "asigdisgdi",
+      "email": "didiudgi@gmail.com",
+      "password": "sgssgjkgk@qtq7tq87tq",
+      "mobileNumber": "9779879797"
     }
   ]
 }

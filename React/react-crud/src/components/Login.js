@@ -39,7 +39,7 @@ export default function Login() {
 
     return (
         <>
-            <div class="container mt-5 bg-white p-5">
+            <div class="container mt-5 bg-white p-5 w-50">
                 {
                     status && <p class='alert alert-danger'>{status}</p>
                 }
