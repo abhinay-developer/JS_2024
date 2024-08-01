@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { USER_BASE_URL } from '../routes/AppRoutes';
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 export default function CreateAccount() {
     const [firstName, setFirstName] = useState('');
