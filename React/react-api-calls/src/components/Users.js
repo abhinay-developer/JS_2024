@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from 'react'
 
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 
 const USER_URL = "https://randomuser.me/api/?results=10";
 export default function Users() {
     const [users, setUsers] = useState([]);
     const [searchText, setSearchText] = useState('');
-    const [filterdUsers, setFilterdUsers] = useState('');
+    const [filterdUsers, setFilterdUsers] = useState([]);
+    const navigate = useNavigate();
 
 
     useEffect(() => {
         getUsers();
         console.log("UseFfect api call")
-    }, [])
+    }, []) //Render Only Once useEffect when dependency array is emty
 
     useEffect(() => {
         const filterdUsers = users.filter((user) => user?.name?.first?.toLowerCase().includes(searchText.toLocaleLowerCase()))
@@ -31,16 +33,16 @@ export default function Users() {
         })
     }
     const searchName = (e) => {
-        setSearchText(e.target.value);
+        setSearchText(e.target.value); //sai ==searchText==sai
     }
 
     return (
         <>
-            <div>
-                <input type='first' placeholder='firstName' onKeyUp={(e) => searchName(e)} />
+            <div className='form-control'>
+                <input type='text' placeholder='firstName' onKeyUp={(e) => searchName(e)} />
             </div>
             {filterdUsers && filterdUsers.map((user) =>
-                <div className='card' key={user.email}>
+                <div className='card' key={user.email} onClick={() => navigate(`../user/${user.login.uuid}`)}>
                     <div>
                         <img src={user.picture.medium} alt={user.name} />
                     </div>
@@ -48,7 +50,6 @@ export default function Users() {
                         <h1>{user.name.first} , {user.name.last}</h1>
                         <p> {user.email}</p>
                     </div>
-
                 </div>
             )}
         </>

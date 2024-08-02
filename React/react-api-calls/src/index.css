@@ -17,8 +17,69 @@ body {
   padding: 2rem;
   margin-top: 1rem;
 }
+.form-control {
+  margin: auto;
+  width: 28%;
+  margin-top: 2rem;
+}
 
+input[type="text"] {
+  width: 100%;
+  padding: 1rem;
+  outline: none;
+  border: 1px solid grey;
+}
 img {
   border-radius: 3rem;
   width: 100px;
+}
+
+.header {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+.header a {
+  text-decoration: none;
+}
+
+.header ul li {
+  list-style-type: none;
+}
+
+.profile-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.profile-name {
+  font-size: 1.5em;
+  margin: 10px 0;
+  color: #333;
+}
+
+.profile-email,
+.profile-location,
+.profile-phone,
+.profile-cell {
+  color: #777;
+  margin: 5px 0;
+  font-size: 0.9em;
 }
